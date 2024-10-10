@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "docker.socker.path",
+    "type": "java.lang.String",
+    "description": "A description for 'docker.socker.path'"
+  },
+  {
+    "name": "docker.socket.path",
+    "type": "java.lang.String",
+    "description": "A description for 'docker.socket.path'"
+  }
+]}
