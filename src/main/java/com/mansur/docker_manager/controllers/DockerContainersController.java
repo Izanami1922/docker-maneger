@@ -25,16 +25,16 @@ public class DockerContainersController {
     }
     
     @GetMapping("")
-    public List<Container> listContainers(@RequestParam(required = false, defaultValue = "true") boolean showALL) {
-        return dockerService.listContainers(showALL);
-    }
-
-    // public List<Container> listContainers(@RequestParam(required = false, defaultValue = "true") boolean showAll) {
-    //     System.out.println("showAll: " + showAll);
-    //     List<Container> containers = dockerService.listContainers(showAll);
-    //     System.out.println("Containers: " + containers);
-    //     return containers;
+    // public List<Container> listContainers(@RequestParam(required = false, defaultValue = "true") boolean showALL) {
+    //     return dockerService.listContainers(showALL);
     // }
+
+    public List<Container> listContainers(@RequestParam(required = false, defaultValue = "true") boolean showAll) {
+        System.out.println("showAll: " + showAll);
+        List<Container> containers = dockerService.listContainers(showAll);
+        System.out.println("Containers: " + containers);
+        return containers;
+    }
 
     @PostMapping("/{id}/start")
     public void stopContainer(@PathVariable String id) {
