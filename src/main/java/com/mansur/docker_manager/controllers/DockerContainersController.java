@@ -32,7 +32,7 @@ public class DockerContainersController {
     public List<Container> listContainers(@RequestParam(required = false, defaultValue = "true") boolean showAll) {
         System.out.println("showAll: " + showAll);
         List<Container> containers = dockerService.listContainers(showAll);
-        System.out.println("Containers: " + containers);
+        //System.out.println("Containers: " + containers);
         return containers;
     }
 
